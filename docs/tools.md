@@ -12,4 +12,4 @@ permalink: /docs/tools
 
 ### The list of selected tools, the detailed categorization information as well as additional implementation specific details for techniques (availability, automation level, invasiveness, date) are provided below:
 
-* ### [Tools](/assets/data/ToolCategorization.xlsx)
+* ### [Tools](../assets/data/ToolCategorization.xlsx)

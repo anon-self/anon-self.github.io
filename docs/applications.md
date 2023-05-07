@@ -11,7 +11,7 @@ permalink: /docs/applications
 ---
 
 
-![](/assets/images/apps.png)
+![](../assets/images/apps.png)
 
 
 ## Coverage Results
