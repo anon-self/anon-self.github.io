@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 domain: anon-self.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://anon-self.github.io/website  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "website/" # the subpath of your site, e.g. /blog
 # Enable or disable heading anchors
 heading_anchors: true
 

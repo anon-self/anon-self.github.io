@@ -6,14 +6,14 @@ description: "Mobile Application Coverage: The 25% Curse and Ways Forward"
 permalink: /docs/applications
 ---
 
-## Selected Google Play Applications
-
+### Selected Google Play Applications
 ---
 
 
-![](../assets/images/apps.png)
+
+![](/assets/images/apps.png)
 
 
-## Coverage Results
+### Coverage Results
 
-### The detailed coverage results for APE and manual analysis are provided below
+The detailed coverage results for APE and manual analysis are provided below
