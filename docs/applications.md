@@ -16,4 +16,5 @@ permalink: /docs/applications
 
 ### Coverage Results
 
-The detailed coverage results for APE and manual analysis are provided below
+The detailed coverage results for APE and manual analysis are provided below:
+* ### [Coverage](../assets/data/CoverageResults.xlsx)
