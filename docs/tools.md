@@ -12,9 +12,9 @@ permalink: /docs/tools
 
 ![Tools](../assets/images/tools.png)
 
-### Practical Considerations
+### Additional Info
 
-Additional implementation-specific info (availability, targeting, invasiveness, date) is provided below:
+Implementation-specific information (availability, targeting, invasiveness, date) is provided below:
 
 
-* ### [PracticalConsiderations](../assets/data/ToolExtraInfo.xlsx)
+* ### [Additional](../assets/data/ToolExtraInfo.xlsx)
