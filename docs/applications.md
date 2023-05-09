@@ -9,8 +9,6 @@ permalink: /docs/applications
 ### Selected Google Play Applications
 ---
 
-
-
 ![](../assets/images/apps.png)
 
 
@@ -18,3 +16,9 @@ permalink: /docs/applications
 
 The detailed coverage results for APE and manual analysis are provided below:
 * ### [Coverage](../assets/data/CoverageResults.xlsx)
+
+
+### App Analysis
+
+The detailed breakdown of reasons for unreachability of manually analyzed apps is provided below:
+* ### [AppAnalysis](../assets/data/AppAnalysis.xlsx)

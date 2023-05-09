@@ -10,6 +10,11 @@ permalink: /docs/tools
 
 ---
 
-The list of selected tools, the detailed categorization information as well as additional implementation specific details for techniques (availability, automation level, invasiveness, date) are provided below:
+![Tools](../assets/images/tools.png)
 
-* ### [Tools](../assets/data/ToolCategorization.xlsx)
+### Practical Considerations
+
+Additional implementation-specific info (availability, targeting, invasiveness, date) is provided below:
+
+
+* ### [PracticalConsiderations](../assets/data/ToolExtraInfo.xlsx)
