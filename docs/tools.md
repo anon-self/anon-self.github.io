@@ -14,7 +14,6 @@ permalink: /docs/tools
 
 ### Additional Info
 
-Implementation-specific information (availability, targeting, invasiveness, date) is provided below:
-
+Tool-specific information (availability, targeting, invasiveness, date) is provided below:
 
 * ### [Additional](../assets/data/ToolExtraInfo.xlsx)
