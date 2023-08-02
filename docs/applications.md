@@ -10,8 +10,12 @@ permalink: /docs/applications
 ---
 We select 42 top ranked free applications from the Google Play Store, sampled in January and May 2023, covering all app categories:
 
-![](../assets/images/apps-latest.png)
-
+<a href="../assets/images/apps-latest.png">
+    <img 
+        src="../assets/images/apps-latest.png"
+        alt="Selected Google Play Applications"
+    >
+</a>
 
 ### Coverage Results
 
@@ -36,15 +40,24 @@ For each application under study, we grey out activities that are reached manual
 ---
 We also experiment on a subset applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest). From 68 applications originally present in the dataset, we exclude 7 apps which crash on startup and for which we can not reliably identify source code.
 
-We reconstitute the dataset by selecting the latest available version for each of the 61 applications as of July 202.
+We reconstitute the dataset by selecting the latest available version for each of the 61 applications as of July 2023.
 We further divide it into two datasets depending on whether the applications are also available on the Google Play Store or not, namely BenchGP and BenchNotGP:
 
-![](../assets/images/benchgp.png)
+<a href="../assets/images/benchgp.png">
+    <img 
+        src="../assets/images/benchgp.png"
+        alt="Selected Benchmark Applications (on Google Play)"
+    >
+</a>
 
 ---
 
-![](../assets/images/benchnotgp.png)
-
+<a href="../assets/images/benchnotgp.png">
+    <img 
+        src="../assets/images/benchnotgp.png"
+        alt="Selected Benchmark Applications (not on Google Play)"
+    >
+</a>
 
 
 

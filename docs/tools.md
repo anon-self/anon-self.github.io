@@ -11,7 +11,13 @@ permalink: /docs/tools
 ---
 We select 27 papers which go beyond UI exploration from existing work and characterize their app exploration approach along four dimensions: Entry Point Triggering Strategy, Entry Point Navigation Strategy, Value Generation Strategy and Value Generation Type. For completeness, we also mark which of the selected papers perform UI manipulation (in addition to their main exploration strategy).
 
-![Tools](../assets/images/tools.png)
+
+<a href="../assets/images/tools.png">
+    <img 
+        src="../assets/images/tools.png"
+        alt="Beyond-UI Exploration Tools"
+    >
+</a>
 
 ### Additional Info
 
