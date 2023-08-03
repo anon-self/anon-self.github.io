@@ -4,14 +4,14 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{color,xcolor}
-\usepackage{amsmath}%, amssymb}
+\usepackage{amsmath, amssymb}
 \usepackage{mathtools}
 \usepackage{enumitem}
 \usepackage{subcaption}
 \usepackage{framed}
 \usepackage[normalem]{ ulem}
 \usepackage{adjustbox}
-%\usepackage[sort,nocompress]{cite}
+\usepackage[sort,nocompress]{cite}
 
 \let\subparagraph\relax
 
@@ -30,18 +30,7 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-\definecolor{jcolor}{rgb}{0.5,0,0.5}
 \definecolor{fcolor}{rgb}{0.36, 0.54, 0.66}
-
-\newcommand{\jr}[1]{\textcolor{jcolor}{{\bf JR}: #1}}
-\newcommand{\fari}[1]{\textcolor{fcolor}{FA: #1}}
-\newcommand{\mike}[1]{\textcolor{blue}{MC: #1}}
-\newcommand{\sh}[1]{\textcolor{dkgreen}{SB: #1}}
-\newcommand{\kh}[1]{\textcolor{dkgreen}{K: #1}}
-\newcommand{\new}[1]{\textcolor{red}{#1}}
-\newcommand{\rebuttal}[1]{\textcolor{red}{RebuttalResponse: #1}}
-\newcommand{\lili}[1]{\textcolor{cyan}{[{\bf Lili}: #1]}}
-
 
 %\newcommand{\website}{\url{APPENDIX WEBSITE}\xspace}
 
@@ -61,10 +50,6 @@
 
 \newcommand\redsout{\bgroup\markoverwith{\textcolor{red}{\rule[0.5ex]{2pt}{0.4pt}}}\ULon}
 
-\newcommand{\benchnotgp}{\emph{BenchNotGP\xspace}}
-\newcommand{\benchgp}{\emph{BenchGP\xspace}}
-\newcommand{\topgp}{\emph{TopGP\xspace}}
-
 \newcommand{\pluto}{Pluto TV\xspace}
 \newcommand{\pc}{PC Health\xspace}
 \newcommand{\mcdo}{McDonald's\xspace}
@@ -78,56 +63,25 @@
 \newcommand{\myexp}{MyExpenses}
 
 
+\newcommand{\benchnotgp}{\emph{BenchNotGP\xspace}}
+\newcommand{\benchgp}{\emph{BenchGP\xspace}}
+\newcommand{\topgp}{\emph{TopGP\xspace}}
+
+
+%\newcommand{\avgm}{24.2}
+%\newcommand{\avga}{20.3}
+%
+
 \newcommand{\avgm}{28.8}
 \newcommand{\avga}{19.8}
-\newcommand{\avgbnotgpa}{84.4}
-\newcommand{\avgbnotgpm}{89.5}
+\newcommand{\avgbnotgpa}{85.0}
+\newcommand{\avgbnotgpm}{90.4}
 \newcommand{\avgbgpa}{64.0}
 \newcommand{\avgbgpm}{75.6}
 
 
-\newcommand{\DS}{DS\xspace}
-\newcommand{\DSP}{DS'\xspace}
-\newcommand{\VT}{VT\xspace}
-\newcommand{\VTP}{VTA\xspace}
-\newcommand{\gp}{GP\xspace}
-\newcommand{\B}{B\xspace}
-%\newcommand{\BDS}\{$B_{DS}$\xspace}
-%\newcommand{\BVT}{$B_{VT}$\xspace}
-
-\newcommand{\nstarnodes}{5.9\xspace}
-\newcommand{\nfamilies}{134\xspace}
-\newcommand{\nsamples}{105\xspace}
-\newcommand{\totalsamples}{1,238\xspace}
-\newcommand{\ncompanies}{19\xspace}
-\newcommand{\cat}[1]{\emph{\underline{#1}}}
 
 
-\newcommand{\D}{\textsc{Drebin}\xspace}
-%\newcommand{\DFS}{\textsc{FS}$^{D}$\xspace}
-%\newcommand{\DC}[1]{\textsc{BClean}$_{#1}^{D}$\xspace}
-%\newcommand{\DD}[1]{\textsc{MDirty}$_{#1}^{D}$\xspace}
-
-
-\newcommand{\tool}{\textsc{BClean}\xspace}
-\newcommand{\orig}{\textsc{Orig}\xspace}
-\newcommand{\idf}{\textsc{IDF}\xspace}
-
-\newcommand{\FS}{\textsc{FS}\xspace}
-\newcommand{\BE}{\textsc{BClean}$_E$\xspace}
-\newcommand{\BB}{\textsc{BClean}$_B$\xspace}
-
-\newcommand{\CS}{\textsc{CSBD}\xspace}
-\newcommand{\RD}{\textsc{RevealDroid}\xspace}
-\newcommand{\MD}{\textsc{MaMaDroid}\xspace}
-
-\newcommand{\code}[1]{{\emph{#1}}}
-%\newcommand{\code}[1]{{\texttt{#1}}}
-%\newcommand{\code}[1]{{\small\emph{#1}}}
-
-\newcommand{\app}[1]{\textsc{#1}\xspace}
-\newcommand{\motiv}{\textsc{SpyBankerHU}\xspace}
-\newcommand{\graph}{\textsc{FBMG}\xspace}
 \renewcommand{\paragraph}[1]{\vskip 0.05in \noindent {\bf #1.}}
 \newcommand{\rotateright}[1]{\rotatebox[origin=c]{90}{#1}}
 \newcommand{\replace}[2]{\sout{#1}~{\color{red}#2}}
@@ -159,6 +113,7 @@
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name={Algorithm}]{algfigure}
 
+
 \newenvironment{MyColorPar}[1]{%
     \leavevmode\color{#1}\ignorespaces%
 }{%
@@ -179,9 +134,9 @@
 
 \usepackage{fontawesome}
 
-\newcommand{\newfindingindicator}{{\tiny \faStarO}}
-\newcommand{\oldfindingindicator}{{\tiny \faArrowRight}}
-\newcommand{\tinystar}{{\tiny \faStarO}}
+%\newcommand{\newfindingindicator}{{\tiny \faStarO}}
+%\newcommand{\oldfindingindicator}{{\tiny \faArrowRight}}
+%\newcommand{\tinystar}{{\tiny \faStarO}}
 
 %%%%%%%%%%%% For checkmarks:
 \usepackage{pifont}

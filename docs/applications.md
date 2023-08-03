@@ -60,7 +60,23 @@ We further divide it into two datasets depending on whether the applications are
 </a>
 
 
+### Coverage Results
 
+We report the average coverage achieved the by the tool and manual analysis on BenchGP and BenchNotGP:
+
+<a href="../assets/images/benchgp-cov.png">
+    <img 
+        src="../assets/images/benchgp-cov.png"
+        alt="Coverage Results for Benchmark Applications (on Google Play)"
+    >
+</a>
+
+<a href="../assets/images/benchnotgp-cov.png">
+    <img 
+        src="../assets/images/benchnotgp-cov.png"
+        alt="Coverage Results for Benchmark Applications (not on Google Play)"
+    >
+</a>
 
 
 
