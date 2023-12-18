@@ -19,8 +19,8 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
 
 ### Coverage Results
 
-The detailed coverage results for APE and manual analysis are provided as an [Excel sheet](../assets/data/CoverageResults.xlsx). 
-For each application under study, we mark which activities are reached by APE and which are reached manually.
+The detailed coverage results for tools and manual analysis are provided as an [Excel sheet](../assets/data/CoverageResults.xlsx). 
+For each application under study, we mark which activities are reached by either tool and which are reached manually.
 
 We also provide plots of the coverage improvement over time achieved by manual analysts in this [zip file](../assets/data/plots.zip)
 
