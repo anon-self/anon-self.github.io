@@ -1,1 +1,1 @@
-# Mobile Application Coverage: The 25% Curse and Ways Forward
+# Mobile Application Coverage: The 30% Curse and Ways Forward
