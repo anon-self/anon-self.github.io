@@ -62,7 +62,7 @@ We further divide it into two datasets depending on whether the applications are
 
 ### Coverage Results
 
-We report the average coverage achieved the by the tool and manual analysis on BenchGP and BenchNotGP:
+We report the average coverage achieved the by the two tools, manual analysts and all combined on BenchGP and BenchNotGP:
 
 <a href="../assets/images/benchgp-cov.png">
     <img 
