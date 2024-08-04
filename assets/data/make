@@ -1,1 +1,0 @@
-pdflatex benchgp-cov.tex -halt-on-error -file-line-error -shell-escape

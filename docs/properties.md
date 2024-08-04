@@ -20,6 +20,7 @@ The breakdown is also provided as a downloadable [pdf](../assets/images/full-pro
 </object>
 
 
-Additionally, we map the different types of properties we extract to the identified reasons for unreachability, to characterize which patterns are most common depending on the reason for unreachability. 
+<!--Additionally, we map the different types of properties we extract to the identified reasons for unreachability, to characterize which patterns are most common depending on the reason for unreachability. 
 
 For example, in the table below, xx% of activities unreached due to missing software properties are activated in GUI/lifecycle callbacks.
+-->
