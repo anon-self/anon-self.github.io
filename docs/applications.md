@@ -8,7 +8,7 @@ permalink: /docs/applications
 
 ### Selected Google Play Applications
 ---
-We select 42 top ranked free applications from the Google Play Store, sampled in January and May 2023, covering all app categories:
+We select 42 top ranked free applications from the Google Play Store, sampled at the end of 2023, covering all app categories:
 
 <a href="../assets/images/apps-latest.png">
     <img 
