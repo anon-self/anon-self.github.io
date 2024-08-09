@@ -12,7 +12,7 @@ We systematically study and characterize properties of conditions guarding the e
 unreached activities.
 
 From a total 363 unreached activities, we exclude activities classified as <i>Unknown</i>, <i>No caller</i> or <i>Transitive</i>. We obtain a set of 152 activities, over which we extract the detailed breakdown, in terms of <b>Export status</b>, <b>Activation Location</b>, <b>Activation Guards</b>, <b>Parameters</b>, and <b>Execution Dependencies</b>, shown below.
-The breakdown is also provided as a downloadable [pdf](../assets/images/full-properties.pdf).
+The breakdown is also provided as an [excel sheet](../assets/data/ActivityProperties.xlsx) and a downloadable [pdf](../assets/images/full-properties.pdf).
 
 
 
