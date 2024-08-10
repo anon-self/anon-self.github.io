@@ -8,10 +8,11 @@ permalink: /docs/analysis
 
 ### Categorization of Reasons for Unreachability (RQ2)
 
-
 The detailed breakdown of manually extracted reasons for unreachability is also provided as an [Excel sheet](../assets/data/ManualAppAnalysis.xlsx). 
 
-For each application under study, we grey out activities that are reached manually, and for each unreached activity, we mark the reasons leading to unreachability as described in the paper, i.e., Device (Software properties and Hardware properties), Server, Environment, External resources (Equipment and Information), Usage patterns, Alternate entry, Disabled (For app version and For all end-users), Error handling, No caller and Unknown.
+For each application under study, we grey out activities that are reached manually, and for each unreached activity, we mark the reasons leading to unreachability as described in the paper, i.e., Device (Software properties and Hardware properties), Server, Environment, External resources (Equipment and Information), Usage patterns, Error handling, Alternate entry, Disabled (For app version and For all end-users), Transitive, No caller and Unknown.
+
+---
 
 ### Categorization of Properties (RQ3)
 
