@@ -41,7 +41,7 @@ We characterized the app exploration approach along four dimensions:
 
 <b> Value Generation Type</b> corresponds to the different types of data that can be generated for a given strategy, notably <i>Generic Primitives</i>, <i>Generic Objects</i> and <i>Specialized</i>.
 
-For completeness, we also mark which of the selected papers perform GUI Exploration by sending GUI and/or System Events (in addition to their main exploration strategy). Additional tool-specific information, notably availability, targeting strategy, invasiveness and date published is in this [Excel sheet](../assets/data/ToolExtraInfo.xlsx).
+For completeness, we also mark which of the selected papers perform GUI Exploration by sending GUI and/or System Events (in addition to their main exploration strategy). Additional tool-specific information, notably availability, targeting strategy, invasiveness and date published is in an [Excel sheet](../assets/data/ToolExtraInfo.xlsx).
 
 <a href="../assets/images/tools.png">
     <img 
