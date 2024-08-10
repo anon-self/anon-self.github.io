@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tools
+title: Beyond-GUI Exploration
 nav_order: 5
 description: "Mobile Application Coverage: The 30% Curse and Ways Forward"
 permalink: /docs/tools
@@ -10,9 +10,9 @@ permalink: /docs/tools
 
 ---
 
-Starting from existing surveys on testing approaches for mobile software<cite>[1,2,3]</cite>, we selected all approaches that propose mechanisms for different forms of ecosystem manipulation, i.e., that modify the app or what it interacts with namely the framework, the device or external components.
+Starting from existing surveys on testing approaches for mobile software[1,2,3], we selected all approaches that propose application exploration mechanisms beyond GUI exploration. These approaches mostly fall outside of the GUI testing domain and include papers related to application functional testing, testing for concurrency, security, performance, and energy consumption. Additionally, they mainly involve alterations to the application or the ecosystem it interacts with, i.e., the framework, the device or external components like servers.
 
-We excluded approaches which require additional human input to guide the exploration, such as bug reports or pre-computed app models, and approaches only applicable to a specific goal, e.g., thread manipulation for data race detection, which would not map to generic app exploration. 
+We further excluded approaches which require additional human input to guide the exploration, such as bug reports or pre-computed app models, and approaches only applicable to a specific goal, e.g., thread manipulation for data race detection, which would not map to generic app exploration. 
 Next, we performed forward snowballing, to augment our list with papers published after the surveys' timeline, using the same inclusion/exclusion criteria. 
 At the end of this process, we identified 22 relevant papers that propose beyond-GUI app exploration strategies.
 
