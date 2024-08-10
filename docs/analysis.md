@@ -8,7 +8,6 @@ permalink: /docs/analysis
 
 ### Categorization of Reasons for Unreachability (RQ2)
 
----
 
 The detailed breakdown of manually extracted reasons for unreachability is also provided as an [Excel sheet](../assets/data/ManualAppAnalysis.xlsx). 
 
@@ -17,8 +16,6 @@ For each application under study, we grey out activities that are reached manual
 ---
 
 ### Categorization of Properties (RQ3)
-
----
 
 We systematically study and characterize properties of conditions guarding the execution of 
 unreached activities.
@@ -30,5 +27,3 @@ The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.
 <!--Additionally, we map the different types of properties we extract to the identified reasons for unreachability, to characterize which patterns are most common depending on the reason for unreachability. 
 For example, in the table below, xx% of activities unreached due to missing software properties are activated in GUI/lifecycle callbacks.
 -->
-
----

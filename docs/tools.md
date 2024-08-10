@@ -8,32 +8,10 @@ permalink: /docs/tools
 
 ### Selected Papers
 
----
+To identify papers that perform beyond-GUI exploration, we started from existing surveys on testing approaches for mobile software [1,2,3]. In addition to GUI-based exploration techniques, these surveys include techniques related to application functional testing, testing for concurrency, security, performance, and energy consumption, which typically involve alterations to the application or the ecosystem it interacts with, i.e., the framework, the device or external components like servers. We excluded approaches which (a) require additional human input to guide the exploration, such as bug reports or pre-computed app models, and (b) only applicable to a specific goal, e.g., thread manipulation for data race detection, which would not map to generic app exploration. 
 
-Starting from existing surveys on testing approaches for mobile software[1,2,3], we selected all approaches that propose application exploration mechanisms beyond GUI exploration. These approaches mostly fall outside of the GUI testing domain and include papers related to application functional testing, testing for concurrency, security, performance, and energy consumption. Additionally, they mainly involve alterations to the application or the ecosystem it interacts with, i.e., the framework, the device or external components like servers.
-
-We further excluded approaches which require additional human input to guide the exploration, such as bug reports or pre-computed app models, and approaches only applicable to a specific goal, e.g., thread manipulation for data race detection, which would not map to generic app exploration. 
-Next, we performed forward snowballing, to augment our list with papers published after the surveys' timeline, using the same inclusion/exclusion criteria. 
-At the end of this process, we identified 22 relevant papers that propose beyond-GUI app exploration strategies.
-
-<p>[1] Kong, Pingfan, et al. "Automated testing of android apps: A systematic literature review." IEEE Transactions on Reliability, 2018.</p>
-<p>[2] Luo, Chu, et al. "A survey of context simulation for testing mobile context-aware applications." ACM Computing Surveys (CSUR), 2020.</p>
-<p>[3] Júnior, Misael C., et al. "Dynamic testing techniques of non-functional requirements in mobile apps: A systematic mapping study." ACM Computing Surveys (CSUR), 2022.</p>
-
----
-
-### Categorization of App Exploration Strategies
-
----
-
-We characterize the app exploration approach of our 22 selected techniques along four dimensions: Invocation Strategy,  Navigation Strategy, Value Generation Strategy and Value Generation Type. For completeness, we also mark which of the selected papers perform GUI Exploration by sending GUI and/or System Events (in addition to their main exploration strategy).
-
-<a href="../assets/images/tools.png">
-    <img 
-        src="../assets/images/tools.png"
-        alt="Beyond-GUI Exploration Tools"
-    >
-</a>
+Next, we performed forward snowballing, to augment our list with papers published after the surveys’ timeline, using the same inclusion/exclusion criteria. At the end of this process, we identified 22 relevant papers listed below.
+We characterized the app exploration approach along four dimensions: 
 
 <b>Invocation Strategy</b>: mechanisms tools employ to launch any given activity and trigger activation locations, notably:
 
@@ -63,10 +41,16 @@ We characterize the app exploration approach of our 22 selected techniques along
 
 <b> Value Generation Type</b> corresponds to the different types of data that can be generated for a given strategy, notably <i>Generic Primitives</i>, <i>Generic Objects</i> and <i>Specialized</i>.
 
----
+For completeness, we also mark which of the selected papers perform GUI Exploration by sending GUI and/or System Events (in addition to their main exploration strategy). Additional tool-specific information, notably availability, targeting strategy, invasiveness and date published is in an [Excel sheet](../assets/data/ToolExtraInfo.xlsx).
 
-### Additional Info
+<a href="../assets/images/tools.png">
+    <img 
+        src="../assets/images/tools.png"
+        alt="Beyond-GUI Exploration Tools"
+    >
+</a>
 
----
 
-We provide additional tool-specific information, notably availability, targeting strategy, invasiveness and date published, in an [Excel sheet](../assets/data/ToolExtraInfo.xlsx).
+<p>[1] Kong, Pingfan, et al. "Automated testing of android apps: A systematic literature review." IEEE Transactions on Reliability, 2018.</p>
+<p>[2] Luo, Chu, et al. "A survey of context simulation for testing mobile context-aware applications." ACM Computing Surveys (CSUR), 2020.</p>
+<p>[3] Júnior, Misael C., et al. "Dynamic testing techniques of non-functional requirements in mobile apps: A systematic mapping study." ACM Computing Surveys (CSUR), 2022.</p>
