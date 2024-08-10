@@ -17,8 +17,6 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
     >
 </a>
 
----
-
 ### Selected Benchmark Applications
 
 We also experiment on a subset applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest). From 68 applications originally present in the dataset, we exclude 7 apps which crash on startup and for which we can not reliably identify source code.

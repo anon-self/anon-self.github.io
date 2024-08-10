@@ -13,8 +13,6 @@ For each application under study, we mark which activities are reached by either
 
 We also provide plots of the coverage improvement over time achieved by manual analysts in this [zip file](../assets/data/plots.zip)
 
----
-
 ### Coverage Results for Benchmark Applications (RQ1)
 
 We report the average coverage achieved the by the two tools, manual analysts and all combined on BenchGP and BenchNotGP:
