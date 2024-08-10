@@ -38,13 +38,13 @@ We characterize the app exploration approach of our 22 selected techniques along
 <b>Invocation Strategy</b>: mechanisms tools employ to launch any given activity and trigger activation locations, notably:
 
 <ul>
-    <li><i>Direct Activity Invocation</i>: sending intents to directly jump start an activity through utilies like ADB. To trigger even non-exported activities, tools can modify the Manifest file to expose all activities.</li>
+    <li><i>Direct Activity Invocation</i>: sending intents to directly jump start an activity through utilities like ADB. To trigger even non-exported activities, tools can modify the Manifest file to expose all activities.</li>
     <li><i>Callback Code Injection</i>: directly invoking callbacks through static or dynamic instrumentation. </li>
     <li><i>Framework Event Generation</i>: customizing the Android OS to inject events at the framework layer, i.e., invoke the same methods within the framework that are triggered by the hardware layer.</li>
     <li><i>Code Extraction</i>: generating a new application containing only one activity and none of the original application entry points, to target a given statement, e.g., startActivity.</li>
 </ul>
 
-<b>Navigation Strategy</b>: mechanisms tools employ to navigating past activation guards, given that the enclosing location is triggered. We identify four main implementation paradigms:
+<b>Navigation Strategy</b>: mechanisms tools employ to navigate past activation guards, given that the enclosing location is triggered. We identify four main implementation paradigms:
     
 <ul>
     <li><i>Forced Branching</i>: modifying control flows of a program to steer execution towards a desired point of interest.</li>
