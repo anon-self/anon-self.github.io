@@ -37,9 +37,10 @@
   "bugs": {
     "url": "https://github.com/guerrero/normalize.scss/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.scss": "file:"
+  },
   "description": "Normalize.scss as a node packaged module",
-  "devDependencies": {},
   "directories": {},
   "dist": {
     "shasum": "4a21dc25bd4c019c857785f829b658aba2a8f9ab",
@@ -58,7 +59,6 @@
     }
   ],
   "name": "normalize.scss",
-  "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
