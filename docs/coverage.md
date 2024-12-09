@@ -17,7 +17,7 @@ We also provide plots of the coverage improvement over time achieved by manual a
 
 ### Coverage Results for Benchmark Applications (RQ1)
 
-We report the average coverage achieved the by the two tools, manual analysts and all combined on BenchGP and BenchNotGP:
+We report the average coverage achieved by the two tools, manual analysts and all combined on BenchGP and BenchNotGP:
 
 <a href="../assets/images/benchgp-cov.png">
     <img 
