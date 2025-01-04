@@ -24,12 +24,12 @@ The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.
 
 The distribution of activities along each property, coupled with the reasons for unreachability of the related activities is as follows:
 
-<!--a href="../assets/images/property-intro-tbl.png">
+<a href="../assets/images/property-intro-tbl.png">
     <img 
         src="../assets/images/property-intro-tbl.png"
         alt="Activation Properties and Mapped Reasons"
     >
-</a-->
+</a>
 
 
 
