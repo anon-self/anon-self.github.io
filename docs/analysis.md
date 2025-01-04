@@ -19,8 +19,13 @@ For each application under study, we grey out activities that are reached manual
 We systematically study and characterize properties of conditions guarding the execution of 
 unreached activities.
 
-From a total 363 unreached activities, we exclude activities classified as <i>Unknown</i>, <i>No caller</i> or <i>Transitive</i>. We obtain a set of 152 activities, from which we extract a detailed breakdown in terms of <b>Export status</b>, <b>Activation Location</b>, <b>Activation Guards</b>, <b>Parameters</b>, and <b>Execution Dependencies</b>.
+From a total 363 unreached activities, we exclude activities classified as <i>Unknown</i>, <i>No caller</i> or <i>Transitive</i>. We obtain a set of 185 activities, from which we extract a detailed breakdown in terms of <b>Exported</b>, <b>Activation Location</b>, <b>Activation Guards</b>, and <b>Data</b>.
 The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.xlsx) and a downloadable [pdf](../assets/images/full-properties.pdf).
+
+The distribution of activities along each property, coupled with the reasons for unreachability of the related activities is as follows:
+
+
+
 
 Additional information, including data types used in guards and activities, is provided [here](../assets/images/additional-properties-submitted.pdf)
 <!--object data="../assets/images/full-properties.pdf" width="1000" height="1000" type='application/pdf'>
@@ -28,3 +33,17 @@ Additional information, including data types used in guards and activities, is p
 <!--Additionally, we map the different types of properties we extract to the identified reasons for unreachability, to characterize which patterns are most common depending on the reason for unreachability. 
 For example, in the table below, xx% of activities unreached due to missing software properties are activated in GUI/lifecycle callbacks.
 -->
+
+From this analysis, we extract 18 types of activity with varying difficulty levels for tools to handle. We further map these types to the associated reasons for unreachability to characterize which patterns are most common depending on the reason:
+
+<a href="../assets/images/property-tbl.png">
+    <img 
+        src="../assets/images/property-tbl.png"
+        alt="Activation Properties and Mapped Reasons"
+    >
+</a>
+
+
+We also characterize the data used in terms of type (<i>Parameters</i> or <i>Execution Dependencies</i>) and format (<i>Primitive only, Primitive + Strings, Primitive + Strings + Objects</i>):
+
+

@@ -23,7 +23,7 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
 
 We also experiment on a subset applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest). From 68 applications originally present in the dataset, we exclude 7 apps which crash on startup and for which we can not reliably identify source code.
 
-We reconstitute the dataset by selecting the latest available version for each of the 61 applications as of July 2023.
+We reconstitute the dataset by selecting the latest available version for each of the 61 applications as of 2023.
 We further divide it into two datasets depending on whether the applications are also available on the Google Play Store or not, namely BenchGP and BenchNotGP:
 
 <a href="../assets/images/benchgp.png">
@@ -40,3 +40,4 @@ We further divide it into two datasets depending on whether the applications are
     >
 </a>
 
+We provide additional details about the selected applications namely the application size, targeted SDK version and used permissions in this [excel file](assets/data/BenchInfo.xlsx)

@@ -1,0 +1,52 @@
+
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+% as image: imgmagick -density 300 
+\documentclass[preview, convert]{standalone} 
+\input{macro}
+
+\begin{document}
+
+\begin{table}[t]
+  \setlength{\tabcolsep}{1.5pt}
+  \renewcommand{\arraystretch}{1.1}
+  \caption{Activation Properties (out of 185 activities)}
+  %\vspace{-0.1in}
+  \label{tbl:prop}%
+  \centering
+  % Indentation, Label, Percentage, Bar, Empty
+  %\begin{subtable}[t]{\linewidth}
+      \begin{tabular}[t]{|P{0.3cm}P{2.5cm}P{0.3cm}|P{3.5cm}|P{11.5cm}|}%P{1cm}|}
+      \hline 
+      \multicolumn{3}{|l|}{\textbf{Property}}      & \multicolumn{1}{c|}{\textbf{\# of Activities (\%)}} & \textbf{Reasons} \\ \hline %&  
+        
+      \multicolumn{3}{|l|}{\textbf{1. Exported}} & 31 (16.8\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{2. Activation Location}} & 185 (100\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Code}} & 149 (80.5\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{GUI/lifecycle}} & 114 (61.6\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Other Android}} & 25 (13.5\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{App-specific}} & 10 (5.4\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Manifest}} & 36 (19.5\%) & \makecell[l]{}\\ 
+      \multicolumn{3}{|l|}{\textbf{3. Activation Guards}} & 138 (74.6\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Enforcement}} & 138 (74.6\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{In Code}} & 117 (63.2\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{In Resources}} & 21 (11.4\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Restriction}} & 138 (74.6\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Mandatory}} & 91 (49.2\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Discretionary}} & 47 (25.4\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{4. Data }} & 143 (77.3\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Type}} & 143 (77.3\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Parameters}} & 123 (66.5\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Execution Dependencies}} & 52 (28.1\%) & \makecell[l]{}\\ \hline
+      \multicolumn{3}{|l|}{\textbf{Format}} & 143 (77.3\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Primitive}} & 107 (57.8\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Strings}} & 69 (37.3\%) & \makecell[l]{}\\ \hline
+      ~ & \multicolumn{2}{l|}{\textbf{Objects}} & 86 (46.5\%) & \makecell[l]{}\\ \hline
+      
+      
+      
+      
+      \end{tabular}    
+  %\end{subtable}
+\end{table}
+
+\end{document}
