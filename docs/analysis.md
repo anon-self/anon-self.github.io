@@ -24,6 +24,14 @@ The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.
 
 The distribution of activities along each property, coupled with the reasons for unreachability of the related activities is as follows:
 
+<!--a href="../assets/images/property-intro-tbl.png">
+    <img 
+        src="../assets/images/property-intro-tbl.png"
+        alt="Activation Properties and Mapped Reasons"
+    >
+</a-->
+
+
 
 
 
@@ -45,5 +53,12 @@ From this analysis, we extract 18 types of activity with varying difficulty leve
 
 
 We also characterize the data used in terms of type (<i>Parameters</i> or <i>Execution Dependencies</i>) and format (<i>Primitive only, Primitive + Strings, Primitive + Strings + Objects</i>):
+
+<a href="../assets/images/property-data-tbl.png">
+    <img 
+        src="../assets/images/property-data-tbl.png"
+        alt="Used Data"
+    >
+</a>
 
 
