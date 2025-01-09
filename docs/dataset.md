@@ -40,4 +40,4 @@ We further divide it into two datasets depending on whether the applications are
     >
 </a>
 
-We provide additional details about the selected applications namely the application size, targeted SDK version and used permissions in this [excel file](assets/data/BenchInfo.xlsx)
+We provide additional details about the selected applications namely the application size, targeted SDK version and used permissions in this [excel file](assets/data/BenchInfo.xlsx).

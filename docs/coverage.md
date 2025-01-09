@@ -11,7 +11,7 @@ permalink: /docs/coverage
 The detailed coverage results for tools and manual analysis are provided as an [Excel sheet](../assets/data/CoverageResults.xlsx). 
 For each application under study, we mark which activities are reached by either tool and which are reached manually.
 
-We also provide plots of the coverage improvement over time achieved by manual analysts in this [zip file](../assets/data/plots.zip)
+We also provide plots of the coverage improvement over time achieved by analysts in this [zip file](../assets/data/plots.zip)
 
 ---
 

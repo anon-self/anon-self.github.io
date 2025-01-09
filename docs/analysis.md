@@ -19,23 +19,20 @@ For each application under study, we grey out activities that are reached manual
 We systematically study and characterize properties of conditions guarding the execution of 
 unreached activities.
 
-From a total 363 unreached activities, we exclude activities classified as <i>Unknown</i>, <i>No caller</i> or <i>Transitive</i>. We obtain a set of 185 activities, from which we extract a detailed breakdown in terms of <b>Exported</b>, <b>Activation Location</b>, <b>Activation Guards</b>, and <b>Data</b>.
-The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.xlsx) and a downloadable [pdf](../assets/images/full-properties.pdf).
+From a total 363 unreached activities, we exclude activities classified as <i>Inconclusive</i>, <i>No caller</i> or <i>Transitive</i>. We obtain a set of 185 activities, from which we extract a detailed breakdown in terms of <b>Exported</b>, <b>Activation Location</b>, <b>Activation Guards</b>, and <b>Data</b>.
+The breakdown is provided as an [excel sheet](../assets/data/ActivityProperties.xlsx).
 
-The distribution of activities along each property, coupled with the reasons for unreachability of the related activities is as follows:
+The distribution of activities along each property, coupled with the reasons for unreachability of the related activities is provided [here](../assets/images/full-properties.pdf).
 
-<a href="../assets/images/property-intro-tbl.png">
+<!--a href="../assets/images/property-intro-tbl.png">
     <img 
         src="../assets/images/property-intro-tbl.png"
         alt="Activation Properties and Mapped Reasons"
     >
-</a>
+</a-->
 
 
 
-
-
-Additional information, including data types used in guards and activities, is provided [here](../assets/images/additional-properties-submitted.pdf)
 <!--object data="../assets/images/full-properties.pdf" width="1000" height="1000" type='application/pdf'>
 </object-->
 <!--Additionally, we map the different types of properties we extract to the identified reasons for unreachability, to characterize which patterns are most common depending on the reason for unreachability. 
