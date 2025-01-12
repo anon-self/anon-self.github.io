@@ -24,10 +24,14 @@ permalink: /docs/dataset
     .table_dataset tr.app_short:hover td {
         background-color: #E6E6FA;
     }
+    td, th{
+        max-width:100%;
+        white-space:nowrap;
+    }
 </style>
 
 <div style="text-align: left"> 
-    All information provided below about the dataset can be downloaded as an <a href="assets/data/BenchInfo.xlsx">excel file</a>.
+    All information provided below about the dataset, as well as the full list of permissions and features used by each app, can be downloaded as an <a href="assets/data/BenchInfo.xlsx">excel file</a>.
 </div>
 
 
@@ -45,9 +49,14 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
             <th style="text-align: left"> Application</th>
             <th style="text-align: left"> Package Name</th>
             <th style="text-align: left"> Version</th>
-            <!--th style="text-align: left"> Category</th>
+            <th style="text-align: left"> Category</th>
             <th style="text-align: left"> Downloads</th>
-            <th style="text-align: left"> Popularity</th-->
+            <th style="text-align: left"> Popularity</th>
+            <th style="text-align: left"> # Activities</th>
+            <th style="text-align: left"> Minimum SDK</th>
+            <th style="text-align: left"> Target SDK</th>
+            <th style="text-align: left"> # Permissions (in Manifest)</th>
+            <th style="text-align: left"> # Features (in Manifest)</th>
         </tr>
     </thead>
     <tbody>
@@ -58,75 +67,26 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
         <td style="text-align: left"> {{ value.application_name }}</td>
         <td style="text-align: left"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.version }}</td>
+        <td style="text-align: left"> {{ value.category }}</td>
+        <td style="text-align: left"> {{ value.downloads }}</td>
+        <td style="text-align: left"> {{ value.popularity_rank }}</td>
+        <td style="text-align: left"> {{ value.activities }}</td>
+        <td style="text-align: left"> {{ value.min_sdk }}</td>
+        <td style="text-align: left"> {{ value.target_sdk }}</td>
+        <td style="text-align: left"> {{ value.num_permissions }}</td>
+        <td style="text-align: left"> {{ value.num_features }}</td>
     </tr>
     <tr id= {{ tr_id }} class="hidden_info">
     <!--td></td-->
-    <td colspan="3">
+    <td colspan="11">
         <table>
             <thead>
                 <tr>
-                <th style="text-align: left"> Category</th>
-                <!--th style="text-align: left"> Downloads</th>
-                <th style="text-align: left"> Popularity</th-->
+                    <th style="text-align: left"> List of permissions (in Manifest)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style="text-align: left"> {{ value.category }}</td>
-                </tr>
-                <thead>
-                    <th style="text-align: left"> # Activities</th>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.activities }}</td>
-                    <!--td style="text-align: left"> {{ value.popularity_rank }}</td-->
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Downloads</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.downloads }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Popularity</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.popularity_rank }}</td>
-                </tr>
-                 <thead>
-                    <tr>
-                        <th style="text-align: left"> Minimum SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.min_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Target SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.target_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign permissions = value.permissions | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_permissions }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> List of permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 <tr>
                     <td style="text-align: left"> 
                     {% for permission in permissions %}
@@ -134,15 +94,7 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
                     {% endfor %}
                     </td>
                 </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Features (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign features = value.features | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_features }}</td>
-                </tr>
                 <thead>
                     <tr>
                         <th style="text-align: left"> List of features (in Manifest)</th>
@@ -158,22 +110,6 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
             </tbody>
         </table>
     </td>
-    <!--td colspan="2">
-        <table>
-            <thead>
-                <tr>
-                <th style="text-align: left"> Downloads</th>
-                <th style="text-align: left"> Popularity</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="text-align: left"> {{ value.downloads }}</td>
-                    <td style="text-align: left"> {{ value.popularity_rank }}</td>
-                </tr>
-            </tbody>
-        </table>
-        </td-->
     </tr>
     {% endfor %}
     </tbody>
@@ -202,6 +138,13 @@ We further divide it into two datasets depending on whether the applications are
             <th style="text-align: left"> Application</th>
             <th style="text-align: left"> Package Name</th>
             <th style="text-align: left"> Version</th>
+            <th style="text-align: left"> Original Version</th>
+            <th style="text-align: left"> Source</th>
+            <th style="text-align: left"> # Activities</th>
+            <th style="text-align: left"> Minimum SDK</th>
+            <th style="text-align: left"> Target SDK</th>
+            <th style="text-align: left"> # Permissions (in Manifest)</th>
+            <th style="text-align: left"> # Features (in Manifest)</th>
         </tr>
     </thead>
     <tbody>
@@ -212,75 +155,25 @@ We further divide it into two datasets depending on whether the applications are
         <td style="text-align: left"> {{ value.application_name }}</td>
         <td style="text-align: left"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.current_version }}</td>
+        <td style="text-align: left"> {{ value.original_version }}</td>
+        <td style="text-align: left"> {{ value.source }}</td>
+        <td style="text-align: left"> {{ value.activities }}</td>
+        <td style="text-align: left"> {{ value.min_sdk }}</td>
+        <td style="text-align: left"> {{ value.target_sdk }}</td>
+        <td style="text-align: left"> {{ value.num_permissions }}</td>
+        <td style="text-align: left"> {{ value.num_features }}</td>
     </tr>
     <tr id= {{ tr_id }} class="hidden_info">
     <!--td></td-->
-    <td colspan="3">
+    <td colspan="10">
         <table>
             <thead>
                 <tr>
-                <th style="text-align: left"> Original Version</th>
-                <!--th style="text-align: left"> Downloads</th>
-                <th style="text-align: left"> Popularity</th-->
+                    <th style="text-align: left"> List of permissions (in Manifest)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style="text-align: left"> {{ value.original_version }}</td>
-                </tr>
-                <thead>
-                    <th style="text-align: left">Year</th>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.year }}</td>
-                    <!--td style="text-align: left"> {{ value.popularity_rank }}</td-->
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Source</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.source }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> # Activities</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.activities }}</td>
-                </tr>
-                 <thead>
-                    <tr>
-                        <th style="text-align: left"> Minimum SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.min_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Target SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.target_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign permissions = value.permissions | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_permissions }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> List of permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 <tr>
                     <td style="text-align: left"> 
                     {% for permission in permissions %}
@@ -288,15 +181,7 @@ We further divide it into two datasets depending on whether the applications are
                     {% endfor %}
                     </td>
                 </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Features (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign features = value.features | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_features }}</td>
-                </tr>
                 <thead>
                     <tr>
                         <th style="text-align: left"> List of features (in Manifest)</th>
@@ -324,6 +209,13 @@ and BenchNotGP:
             <th style="text-align: left"> Application</th>
             <th style="text-align: left"> Package Name</th>
             <th style="text-align: left"> Version</th>
+            <th style="text-align: left"> Original Version</th>
+            <th style="text-align: left"> Source</th>
+            <th style="text-align: left"> # Activities</th>
+            <th style="text-align: left"> Minimum SDK</th>
+            <th style="text-align: left"> Target SDK</th>
+            <th style="text-align: left"> # Permissions (in Manifest)</th>
+            <th style="text-align: left"> # Features (in Manifest)</th>
         </tr>
     </thead>
     <tbody>
@@ -334,75 +226,25 @@ and BenchNotGP:
         <td style="text-align: left"> {{ value.application_name }}</td>
         <td style="text-align: left"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.current_version }}</td>
+        <td style="text-align: left"> {{ value.original_version }}</td>
+        <td style="text-align: left"> {{ value.source }}</td>
+        <td style="text-align: left"> {{ value.activities }}</td>
+        <td style="text-align: left"> {{ value.min_sdk }}</td>
+        <td style="text-align: left"> {{ value.target_sdk }}</td>
+        <td style="text-align: left"> {{ value.num_permissions }}</td>
+        <td style="text-align: left"> {{ value.num_features }}</td>
     </tr>
     <tr id= {{ tr_id }} class="hidden_info">
     <!--td></td-->
-    <td colspan="3">
+    <td colspan="10">
         <table>
             <thead>
                 <tr>
-                <th style="text-align: left"> Original Version</th>
-                <!--th style="text-align: left"> Downloads</th>
-                <th style="text-align: left"> Popularity</th-->
+                    <th style="text-align: left"> List of permissions (in Manifest)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td style="text-align: left"> {{ value.original_version }}</td>
-                </tr>
-                <thead>
-                    <th style="text-align: left">Year</th>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.year }}</td>
-                    <!--td style="text-align: left"> {{ value.popularity_rank }}</td-->
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Source</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.source }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> # Activities</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.activities }}</td>
-                </tr>
-                 <thead>
-                    <tr>
-                        <th style="text-align: left"> Minimum SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.min_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> Target SDK</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> {{ value.target_sdk }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign permissions = value.permissions | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_permissions }}</td>
-                </tr>
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> List of permissions (in Manifest)</th>
-                    </tr>
-                </thead>
                 <tr>
                     <td style="text-align: left"> 
                     {% for permission in permissions %}
@@ -410,15 +252,7 @@ and BenchNotGP:
                     {% endfor %}
                     </td>
                 </tr>
-                <thead>
-                    <tr>
-                    <th style="text-align: left"> # Features (in Manifest)</th>
-                    </tr>
-                </thead>
                 {% assign features = value.features | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> {{ value.num_features }}</td>
-                </tr>
                 <thead>
                     <tr>
                         <th style="text-align: left"> List of features (in Manifest)</th>
