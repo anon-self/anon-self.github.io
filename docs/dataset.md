@@ -10,7 +10,7 @@ permalink: /docs/dataset
 
 <script type="text/javascript">
         function showHideRow(row) {
-            $("#" + row).toggle();
+            //$("#" + row).toggle();
         }
 </script>
 
@@ -30,18 +30,15 @@ permalink: /docs/dataset
     }
 </style>
 
-<div style="text-align: left"> 
-    All information provided below about the dataset, as well as the full list of permissions and features used by each app, can be downloaded as an <a href="assets/data/BenchInfo.xlsx">excel file</a>.
-</div>
-
-
----
-
+<!-- 
 ### Selected Google Play Applications
 
-<!-- Here put a list of all the applications and on click show the detailed info from the table, should be loaded from excel !-->
+Here put a list of all the applications and on click show the detailed info from the table, should be loaded from excel !-->
 
-We select 42 top ranked free applications from the Google Play Store, sampled in 2023, covering all app categories:
+We experiment on three application benchmarks: 
+
+
+#### TopGP: 42 top-ranked free applications from the Google Play Store
 
 <table id="table_topgp" class="table_dataset">
     <thead>
@@ -124,21 +121,26 @@ We select 42 top ranked free applications from the Google Play Store, sampled in
 
 ---
 
+<!-- 
 ### Selected Benchmark Applications
-<a hr>
+
 
 We also experiment on a subset applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest). From 68 applications originally present in the dataset, we exclude 7 apps which crash on startup and for which we can not reliably identify source code.
 
 We reconstitute the dataset by selecting the latest available version for each of the 61 applications as of 2023.
-We further divide it into two datasets depending on whether the applications are also available on the Google Play Store or not, namely BenchGP:
+We further divide it into two datasets depending on whether the applications are also available on the Google Play Store or not, namely:
+-->
+
+#### BenchGP: 47 applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest), also available on Google Play Store
 
 <table id="table_bgp" class="table_dataset">
     <thead>
         <tr>
             <th style="text-align: left"> Application</th>
             <th style="text-align: left"> Package Name</th>
-            <th style="text-align: left"> Version</th>
+            <th style="text-align: left"> Latest Version (Used)</th>
             <th style="text-align: left"> Original Version</th>
+            <th style="text-align: left"> Year</th>
             <th style="text-align: left"> Source</th>
             <th style="text-align: left"> # Activities</th>
             <th style="text-align: left"> Minimum SDK</th>
@@ -156,6 +158,7 @@ We further divide it into two datasets depending on whether the applications are
         <td style="text-align: left"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.current_version }}</td>
         <td style="text-align: left"> {{ value.original_version }}</td>
+        <td style="text-align: left"> {{ value.year }}</td>
         <td style="text-align: left"> {{ value.source }}</td>
         <td style="text-align: left"> {{ value.activities }}</td>
         <td style="text-align: left"> {{ value.min_sdk }}</td>
@@ -165,7 +168,7 @@ We further divide it into two datasets depending on whether the applications are
     </tr>
     <tr id= {{ tr_id }} class="hidden_info">
     <!--td></td-->
-    <td colspan="10">
+    <td colspan="11">
         <table>
             <thead>
                 <tr>
@@ -202,14 +205,17 @@ We further divide it into two datasets depending on whether the applications are
     </tbody>
 </table>
 
-and BenchNotGP:
+#### BenchNotGP: 14 applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest), not on the Google Play Store
+
+
 <table id="table_bgp" class="table_dataset">
     <thead>
         <tr>
             <th style="text-align: left"> Application</th>
             <th style="text-align: left"> Package Name</th>
-            <th style="text-align: left"> Version</th>
+            <th style="text-align: left"> Latest Version (Used)</th>
             <th style="text-align: left"> Original Version</th>
+            <th style="text-align: left"> Year</th>
             <th style="text-align: left"> Source</th>
             <th style="text-align: left"> # Activities</th>
             <th style="text-align: left"> Minimum SDK</th>
@@ -227,6 +233,7 @@ and BenchNotGP:
         <td style="text-align: left"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.current_version }}</td>
         <td style="text-align: left"> {{ value.original_version }}</td>
+        <td style="text-align: left"> {{ value.year }}</td>
         <td style="text-align: left"> {{ value.source }}</td>
         <td style="text-align: left"> {{ value.activities }}</td>
         <td style="text-align: left"> {{ value.min_sdk }}</td>
@@ -288,5 +295,12 @@ and BenchNotGP:
         alt="Selected Benchmark Applications (not on Google Play)"
     >
 </a-->
+
+<div style="text-align: left"> 
+    All information provided above about the dataset, as well as the full list of permissions and features used by each app, can be downloaded as an <a href="assets/data/BenchInfo.xlsx">excel file</a>.
+</div>
+
+
+---
 
 <!--We provide additional details about the selected applications namely the application size, targeted SDK version and used permissions in this [excel file](assets/data/BenchInfo.xlsx).-->
