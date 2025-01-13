@@ -15,6 +15,12 @@ permalink: /docs/dataset
 </script>
 
 <style>
+    table {
+        overflow-x: auto;
+        display: block;
+        table-layout:fixed;
+        white-space: nowrap;
+    }
     .table_dataset .hidden_info {
         display: none;
     }
@@ -22,12 +28,17 @@ permalink: /docs/dataset
         border-collapse: collapse;
     }
     .table_dataset tr.app_short:hover td {
-        background-color: #E6E6FA;
+        /*background-color: #E6E6FA;*/
     }
-    td, th{
-        max-width:100%;
-        white-space:nowrap;
+    
+    td.app, th.app {
+        min-width: 150px
     }
+
+    td.package, th.package {
+        min-width: 285px
+    }
+    
 </style>
 
 <!-- 
@@ -38,7 +49,7 @@ Here put a list of all the applications and on click show the detailed info from
 We experiment on three application benchmarks: 
 
 
-#### TopGP: 42 top-ranked free applications from the Google Play Store
+#### TopGP: 42 top-ranked free apps from the Google Play Store
 
 <table id="table_topgp" class="table_dataset">
     <thead>
@@ -131,89 +142,15 @@ We reconstitute the dataset by selecting the latest available version for each o
 We further divide it into two datasets depending on whether the applications are also available on the Google Play Store or not, namely:
 -->
 
-#### BenchGP: 47 applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest), also available on Google Play Store
-
-<table id="table_bgp" class="table_dataset">
-    <thead>
-        <tr>
-            <th style="text-align: left"> Application</th>
-            <th style="text-align: left"> Package Name</th>
-            <th style="text-align: left"> Latest Version (Used)</th>
-            <th style="text-align: left"> Original Version</th>
-            <th style="text-align: left"> Year</th>
-            <th style="text-align: left"> Source</th>
-            <th style="text-align: left"> # Activities</th>
-            <th style="text-align: left"> Minimum SDK</th>
-            <th style="text-align: left"> Target SDK</th>
-            <th style="text-align: left"> # Permissions (in Manifest)</th>
-            <th style="text-align: left"> # Features (in Manifest)</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for value in site.data.benchgp-info %}
-    {% assign tr_id = 'hidden_info_bgp' | append: forloop.index %}
-    {% assign onClickFunc = "showHideRow('" | append: tr_id | append: "')" %}
-    <tr onClick="{{ onClickFunc }}" class="app_short">
-        <td style="text-align: left"> {{ value.application_name }}</td>
-        <td style="text-align: left"> {{ value.package_name }}</td>
-        <td style="text-align: left"> {{ value.current_version }}</td>
-        <td style="text-align: left"> {{ value.original_version }}</td>
-        <td style="text-align: left"> {{ value.year }}</td>
-        <td style="text-align: left"> {{ value.source }}</td>
-        <td style="text-align: left"> {{ value.activities }}</td>
-        <td style="text-align: left"> {{ value.min_sdk }}</td>
-        <td style="text-align: left"> {{ value.target_sdk }}</td>
-        <td style="text-align: left"> {{ value.num_permissions }}</td>
-        <td style="text-align: left"> {{ value.num_features }}</td>
-    </tr>
-    <tr id= {{ tr_id }} class="hidden_info">
-    <!--td></td-->
-    <td colspan="11">
-        <table>
-            <thead>
-                <tr>
-                    <th style="text-align: left"> List of permissions (in Manifest)</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% assign permissions = value.permissions | split: "; " %}
-                <tr>
-                    <td style="text-align: left"> 
-                    {% for permission in permissions %}
-                        <tr> <td>{{ permission }}</td></tr>
-                    {% endfor %}
-                    </td>
-                </tr>
-                {% assign features = value.features | split: "; " %}
-                <thead>
-                    <tr>
-                        <th style="text-align: left"> List of features (in Manifest)</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td style="text-align: left"> 
-                    {% for feature in features %}
-                        <tr> <td>{{ feature | split: "implied" | first}}</td></tr>
-                    {% endfor %}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
-#### BenchNotGP: 14 applications from the [AndroTest dataset](http://www.cc.gatech.edu/∼orso/software/androtest), not on the Google Play Store
+#### BenchNotGP: 47 open-source apps from [AndroTest](http://www.cc.gatech.edu/∼orso/software/androtest), not on the Google Play Store
 
 
 <table id="table_bgp" class="table_dataset">
     <thead>
         <tr>
-            <th style="text-align: left"> Application</th>
-            <th style="text-align: left"> Package Name</th>
-            <th style="text-align: left"> Latest Version (Used)</th>
+            <th style="text-align: left" class="app"> Application</th>
+            <th style="text-align: left"  class="package"> Package Name</th>
+            <th style="text-align: left"> Used Version (Latest)</th>
             <th style="text-align: left"> Original Version</th>
             <th style="text-align: left"> Year</th>
             <th style="text-align: left"> Source</th>
@@ -229,8 +166,8 @@ We further divide it into two datasets depending on whether the applications are
     {% assign tr_id = 'hidden_info_bngp' | append: forloop.index %}
     {% assign onClickFunc = "showHideRow('" | append: tr_id | append: "')" %}
     <tr onClick="{{ onClickFunc }}" class="app_short">
-        <td style="text-align: left"> {{ value.application_name }}</td>
-        <td style="text-align: left"> {{ value.package_name }}</td>
+        <td style="text-align: left" class="app"> {{ value.application_name }}</td>
+        <td style="text-align: left" class="package"> {{ value.package_name }}</td>
         <td style="text-align: left"> {{ value.current_version }}</td>
         <td style="text-align: left"> {{ value.original_version }}</td>
         <td style="text-align: left"> {{ value.year }}</td>
@@ -295,6 +232,81 @@ We further divide it into two datasets depending on whether the applications are
         alt="Selected Benchmark Applications (not on Google Play)"
     >
 </a-->
+
+
+#### BenchGP: 14 open-source apps from [AndroTest](http://www.cc.gatech.edu/∼orso/software/androtest), also available on Google Play Store
+
+<table id="table_bgp" class="table_dataset">
+    <thead>
+        <tr>
+            <th style="text-align: left" class="app"> Application</th>
+            <th style="text-align: left" class="package"> Package Name</th>
+            <th style="text-align: left"> Used Version (Latest)</th>
+            <th style="text-align: left;">Original Version</th>
+            <th style="text-align: left"> Year</th>
+            <th style="text-align: left"> Source</th>
+            <th style="text-align: left"> # Activities</th>
+            <th style="text-align: left"> Minimum SDK</th>
+            <th style="text-align: left"> Target SDK</th>
+            <th style="text-align: left"> # Permissions (in Manifest)</th>
+            <th style="text-align: left"> # Features (in Manifest)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for value in site.data.benchgp-info %}
+    {% assign tr_id = 'hidden_info_bgp' | append: forloop.index %}
+    {% assign onClickFunc = "showHideRow('" | append: tr_id | append: "')" %}
+    <tr onClick="{{ onClickFunc }}" class="app_short">
+        <td style="text-align: left" class="app"> {{ value.application_name }}</td>
+        <td style="text-align: left" class="package"> {{ value.package_name }}</td>
+        <td style="text-align: left"> {{ value.current_version }}</td>
+        <td style="text-align: left"> {{ value.original_version }}</td>
+        <td style="text-align: left"> {{ value.year }}</td>
+        <td style="text-align: left"> {{ value.source }}</td>
+        <td style="text-align: left"> {{ value.activities }}</td>
+        <td style="text-align: left"> {{ value.min_sdk }}</td>
+        <td style="text-align: left"> {{ value.target_sdk }}</td>
+        <td style="text-align: left"> {{ value.num_permissions }}</td>
+        <td style="text-align: left"> {{ value.num_features }}</td>
+    </tr>
+    <tr id= {{ tr_id }} class="hidden_info">
+    <!--td></td-->
+    <td colspan="11">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: left"> List of permissions (in Manifest)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% assign permissions = value.permissions | split: "; " %}
+                <tr>
+                    <td style="text-align: left"> 
+                    {% for permission in permissions %}
+                        <tr> <td>{{ permission }}</td></tr>
+                    {% endfor %}
+                    </td>
+                </tr>
+                {% assign features = value.features | split: "; " %}
+                <thead>
+                    <tr>
+                        <th style="text-align: left"> List of features (in Manifest)</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td style="text-align: left"> 
+                    {% for feature in features %}
+                        <tr> <td>{{ feature | split: "implied" | first}}</td></tr>
+                    {% endfor %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
 <div style="text-align: left"> 
     All information provided above about the dataset, as well as the full list of permissions and features used by each app, can be downloaded as an <a href="assets/data/BenchInfo.xlsx">excel file</a>.
